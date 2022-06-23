@@ -12,20 +12,19 @@ public class Produit {
     @GeneratedValue
     private int id;
     private String nomProduit;
-    private double prix;
+    private float prix;
 
     public Produit() {
     }
 
-    public Produit(String nomProduit, double prix) {
+    public Produit(String nomProduit, float prix) {
         this.nomProduit = nomProduit;
         this.prix = prix;
     }
 
-    public Produit(int id, String nomProduit, double prix) {
+    public Produit(int id, String nomProduit, float prix) {
         this.id = id;
         this.nomProduit = nomProduit;
-  
         this.prix = prix;
     }
 
@@ -46,11 +45,11 @@ public class Produit {
     }
 
   
-    public double getPrix() {
+    public float getPrix() {
         return prix;
     }
 
-    public void setPrix(double prix) {
+    public void setPrix(float prix) {
         this.prix = prix;
     }
    
