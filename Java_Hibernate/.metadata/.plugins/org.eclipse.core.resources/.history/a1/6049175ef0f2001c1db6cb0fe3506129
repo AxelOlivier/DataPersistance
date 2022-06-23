@@ -1,0 +1,21 @@
+package org.o7planning.Boulanger;
+
+
+import org.hibernate.SessionFactory;
+
+public class Hibernate_Utils {
+	  private static final SessionFactory sessionFactory;
+	    
+	    static {
+	        try {
+	            sessionFactory = new AnnotationConfiguration().configure("ma/exelib/projet/config/hibernate.cfg.xml").buildSessionFactory();
+	        } catch (Throwable ex) {
+	            System.err.println("Initial SessionFactory creation failed." + ex);
+	            throw new ExceptionInInitializerError(ex);
+	        }
+	    }
+	    
+	    public static SessionFactory getSessionFactory() {
+	        return sessionFactory;
+	    }
+}
